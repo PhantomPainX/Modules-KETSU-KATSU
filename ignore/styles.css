@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+.shadow {
+    box-shadow: black;
+}
+
+.spaceContainer {
+    margin: 5em auto 5em auto;
+}
+
+.spaceTit {
+    margin: 5em auto auto auto;
+}
+
+h1,h2 {
+    
+    color: beige;
+}
+
+h3 {
+    color: rgb(5, 65, 52);
+}
+
+img {
+    width: 10em;
+}
+
+.btn:hover {
+    background-color: #cf075b;
+    color: cornsilk;
+    border: none;
+}
+
+.btn:active {
+    background-color: black;
+}
