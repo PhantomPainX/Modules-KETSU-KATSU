@@ -11,7 +11,7 @@
     "moduleType": "Video",
     "baseURL": "https://www.animefenix.com",
     "moduleDeveloperSite": "https://github.com/PhantomPainX",
-    "UpdateSite": "https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/AnimeFenix/moduleTemplate.json",
+    "UpdateSite": "https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFenix/moduleTemplate.json",
     "preferedServer": "UM",
     "preferedDownloadServer": "UM",
     "blackListed": [
