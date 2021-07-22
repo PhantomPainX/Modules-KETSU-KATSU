@@ -2,12 +2,10 @@
 
 This repository is for saving my Ketsu and Katsu modules.
 
-Visit the page below to see available and coming modules :) 
+Visit the page below to see available and coming modules :)
 
-[Modules](https://phantompainx.github.io/Modules-KETSU-KATSU/)
+## Page
 
-Este repositorio es para guardar mis modulos de Ketsu y Katsu.
+This page will save every update alongside the repository.
 
-Visita la pagina de abajo para ver los modulos disponibles y los que estan en progreso :)
-
-[Modules](https://phantompainx.github.io/Modules-KETSU-KATSU/)
+[Visit me](https://phantompainx.github.io/Modules-KETSU-KATSU/)
