@@ -514,41 +514,57 @@ function Chapters(request, extra, javascriptConfig, output) {
     for (opcion of optionList) {
         
         let inra = opcion.querySelector('a').getAttribute('title');
-        var opcionPosFembed, opcionPosMega, opcionPosMp4;
+        var opcionPos, link, partLink;
 
         if (inra == 'Fembed') {
-            opcionPosFembed = contadorIndex;
+            opcionPos = contadorIndex;
 
-            let linkFembed = playerNodeList[opcionPosFembed-1].src;
-            let partLinkFembed = linkFembed.split('code=');
+            link = playerNodeList[opcionPos-1].src;
+            partLink = link.split('code=');
 
-            finalFembedLink = 'https://www.fembed.com/v/' + partLinkFembed[1];
+            link = 'https://www.fembed.com/v/' + partLink[1];
 
-            console.log(finalFembedLink);
+            console.log(link);
 
-            output.push(new NeedsResolver('', new ModuleRequest(finalFembedLink, 'get', emptyKeyValue, null)));
+            output.push(new NeedsResolver('', new ModuleRequest(link, 'get', emptyKeyValue, null)));
 
         } else if (inra == 'M') {
-            opcionPosMega = contadorIndex;
+            opcionPos = contadorIndex;
 
-            let linkMega = playerNodeList[opcionPosMega-1].src;
-            let partLinkMega = linkMega.split('code=');
-            finalMegaLink = 'https://mega.nz/embed/' + partLinkMega[1];
+            link = playerNodeList[opcionPos-1].src;
+            partLink = link.split('code=');
 
-            console.log(finalMegaLink);
+            link = 'https://mega.nz/embed/' + partLink[1];
 
-            output.push(new NeedsResolver('', new ModuleRequest(finalMegaLink, 'get', emptyKeyValue, null)));
+            console.log(link);
+
+            output.push(new NeedsResolver('', new ModuleRequest(link, 'get', emptyKeyValue, null)));
 
 
         } else if (inra == 'Mp4upload') {
-            opcionPosMp4 = contadorIndex;
+            opcionPos = contadorIndex;
 
-            let linkMp4Upload = playerNodeList[opcionPosMp4-1].src;
-            let partLinkMp4Upload = linkMp4Upload.split('code=');
-            console.log(partLinkMp4Upload);
-            finalMp4UploadLink = 'https://www.mp4upload.com/embed-' + partLinkMp4Upload[1] + '.html';
-            console.log(finalMp4UploadLink);
-            output.push(new NeedsResolver('', new ModuleRequest(finalMp4UploadLink, 'get', emptyKeyValue, null)));
+            link = playerNodeList[opcionPos-1].src;
+            partLink = link.split('code=');
+            console.log(partLink);
+
+            link = 'https://www.mp4upload.com/embed-' + partLink[1] + '.html';
+            console.log(link);
+            output.push(new NeedsResolver('', new ModuleRequest(link, 'get', emptyKeyValue, null)));
+
+        } else if (inra == 'YourUpload') {
+
+            opcionPos = contadorIndex;
+
+            link = playerNodeList[opcionPos-1].src;
+            partLink = link.split('code=');
+            console.log(partLink);
+
+            link = 'https://www.yourupload.com/embed/' + partLink[1];
+            console.log(link);
+
+            output.push(new NeedsResolver('', new ModuleRequest(link, 'get', emptyKeyValue, null)));
+
         }
 
         contadorIndex += 1;
