@@ -8,6 +8,10 @@ body {
     background-color: blanchedalmond;
 }
 
+.row button {
+    margin-bottom: 10px;
+}
+
 .shadow {
     box-shadow: black;
 }
