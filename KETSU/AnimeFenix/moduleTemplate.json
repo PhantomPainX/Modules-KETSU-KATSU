@@ -6,14 +6,14 @@
     "developer": "KnifeX",
     "moduleID": "876352414",
     "moduleImage": "https://www.animefenix.com/themes/animefenix-frans185/images/AveFenix.png",
-    "moduleVersion": 1.2,
+    "moduleVersion": 1.21,
     "moduleLenguage": "ESP",
     "moduleType": "Video",
     "baseURL": "https://www.animefenix.com",
-    "moduleDeveloperSite": "https://github.com/PhantomPainX",
+    "moduleDeveloperSite": "https://github.com/PhantomPainX/Modules-KETSU-KATSU",
     "UpdateSite": "https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFenix/moduleTemplate.json",
-    "preferedServer": "UM",
-    "preferedDownloadServer": "UM",
+    "preferedServer": "FEMBED",
+    "preferedDownloadServer": "FEMBED",
     "blackListed": [
       ""
     ]
@@ -154,7 +154,7 @@
   "search": [
     {
       "request": {
-        "url": "https://www.animefenix.com/animes?q=<searched>",
+        "url": "https://www.animefenix.com/animes?q=<searched>&page=<page>",
         "method": "get",
         "headers": [
           {
