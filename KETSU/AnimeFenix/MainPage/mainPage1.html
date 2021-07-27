@@ -1840,7 +1840,7 @@ const DefaultLayouts = {
     }
 
     output.push(new Output(CellDesings.Special3, Orientation.horizontal, DefaultLayouts.none, Paging.leading, new Section('Populares', true), topLayout, shuffle(popuArray.slice())));
-    output.push(new Output(CellDesings.Special1, Orientation.horizontal, DefaultLayouts.wideStrechedFullDouble, Paging.leading, new Section('Episodios Recientes', true), null, ultEpArray));
+    output.push(new Output(CellDesings.wide2, Orientation.horizontal, DefaultLayouts.wideFull, Paging.leading, new Section('Episodios Recientes', true), null, ultEpArray));
     output.push(new Output(CellDesings.normal2, Orientation.horizontal, DefaultLayouts.longTripletsFullDouble, Paging.leading, new Section('Últimos Animes', true), null, ultAnArray));
 
     let MainPageObject = new MainPage(new ModuleRequest('','get',emptyKeyValue,null),new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),new JavascriptConfig(true,false,''),output);
