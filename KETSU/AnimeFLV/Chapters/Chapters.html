@@ -375,31 +375,14 @@
         }
     }
 
-    var linksArray = [];
-    
+    var ascript = JSON.parse(script.split('var videos = ')[1].replace('; // ',''));
 
+    console.log(ascript);
 
-
-    var linkData = script.split('https:');
-
-
-    var largo = linkData.length - 2;
-
-    for (var x = 1; x < largo; x++) {
-
-        var tData = linkData[x].split('}');
-
-        
-
-        if (tData[0].includes('mega') || tData[0].includes('allow_mobile')) {
-            continue;
-
-        } else {
-            var fixedLink = tData[0].replace(/[^-a-zA-Z0-9{};,:/=?.+#!¡_ ]/g, '');
-            var finalLink = 'https:' + fixedLink;
-            output.push(new NeedsResolver('', new ModuleRequest(finalLink, 'get', emptyKeyValue, null)));
-        }
-
+    for (var i in ascript.SUB) {
+        var obj = ascript.SUB[i];
+        console.log(obj.code);
+        output.push(new NeedsResolver('', new ModuleRequest(obj.code, 'get', emptyKeyValue, null)));
     }
 
     console.log(output);

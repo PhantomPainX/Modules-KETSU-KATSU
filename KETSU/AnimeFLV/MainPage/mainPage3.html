@@ -916,56 +916,60 @@
     
         var parsedJson = JSON.parse(savedData.innerHTML); 
     
-        let output = [];
+        let output = parsedJson.output;
         let emptyKeyValue = [new KeyValue('','')];
 
 
         mainPage = 'https://www3.animeflv.net';
 
-        nodeList = document.querySelector('.ListEpisodios').querySelectorAll('li');
+        nodeList = document.querySelector('.ListAnimes').querySelectorAll('li');
 
-        var link, image, title, data, ultCapArray = [];
-        
-        for (ultCap of nodeList) {
-            
-            link = mainPage + ultCap.querySelector('a').href;
-            link = link.replace('/ver/','/anime/');
-            
-            var cont = 0, lastIndex = 0;
-            var linkArray = [];
+        var ultAnimesArray = [];
 
-            for (var pos = 0; pos < link.length; pos++) {
-                if (link[pos] == '-') {
-                    cont = pos;
-                }
-                linkArray.push(link[pos]);
-                lastIndex += 1;
-            }
+        for (ultAnime of nodeList) {
 
-            linkArray.splice(cont, lastIndex);
-
-            link = linkArray.join('');
+            link = mainPage + ultAnime.querySelector('a').href;
 
             link = new ModuleRequest(link, 'get', emptyKeyValue, null);
 
-            image = mainPage + ultCap.querySelector('img').src;
+            image = mainPage + ultAnime.querySelector('img').src;
+
             image = new ModuleRequest(image, 'get', emptyKeyValue, null);
 
-            title = ultCap.querySelector('strong.Title').innerText;
+            title = ultAnime.querySelector('h3.Title').innerText;
+ 
 
-            let episodio = ultCap.querySelector('span.Capi').innerText;
+            let tipo = ultAnime.querySelector('span.Type').innerText;
 
-            data = quickData(link, image, title, episodio);
 
-            ultCapArray.push(data);
+            data = quickData(link, image, title, tipo);
+
+            ultAnimesArray.push(data);
         }
 
+        output.push(new Output(CellDesings.normal2, Orientation.horizontal, DefaultLayouts.longTripletsFullDouble, Paging.leading, new Section('Últimos Animes Agregados', true), null, ultAnimesArray));
 
-        let page = rBetween(1,105);
 
-        output.push(new Output(CellDesings.normal7, Orientation.horizontal, DefaultLayouts.wideStrechedDouble, Paging.leading, new Section('Últimos Episodios', true), null, ultCapArray));
+        nodeList = document.querySelector('ul.ListSdbr').querySelectorAll('li');
+        var EmiArray = [];
+        console.log(nodeList);
 
-        let MainPageObject = new MainPage(new ModuleRequest('https://www3.animeflv.net/browse?type%5B%5D=tv&order=rating&page='+page,'get',emptyKeyValue,null),new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),new JavascriptConfig(true,false,''),output);
+        for (anime of nodeList) {
+
+            link = mainPage + anime.querySelector('a').href;
+            link = new ModuleRequest(link, 'get', emptyKeyValue, null);
+            title = anime.querySelector('a').innerText.replace(' Anime','');
+            console.log(title);
+            data = quickData(link, link, title, '');
+            EmiArray.push(data);
+        }
+
+        console.log(EmiArray);
+
+        var testLayout = new Layout(new Insets(0, 0, 10, 10), 1, 1, 1, 1, 50, new Size(400, 50), null, new Size(0, 0), 0, 0);
+        output.push(new Output(CellDesings.small2, Orientation.vertical, DefaultLayouts.none, Paging.none, new Section('En Emisión', true), testLayout, EmiArray));
+
+        let MainPageObject = new MainPage(new ModuleRequest('','get',emptyKeyValue,null),new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),new JavascriptConfig(true,false,''),output);
     
         var finalJson = JSON.stringify(MainPageObject);
         savedData.innerHTML = finalJson;

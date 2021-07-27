@@ -896,7 +896,7 @@
         output.push(new Output(CellDesings.Special2, Orientation.horizontal, DefaultLayouts.none, Paging.leading, new Section('Animes Random', true), testLayout, ranAnArray));
         
 
-        let MainPageObject = new MainPage(new ModuleRequest('','get',emptyKeyValue,null),new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),new JavascriptConfig(true,false,''),output);
+        let MainPageObject = new MainPage(new ModuleRequest(mainPage,'get',emptyKeyValue,null),new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),new JavascriptConfig(true,false,''),output);
     
         var finalJson = JSON.stringify(MainPageObject);
         savedData.innerHTML = finalJson;
