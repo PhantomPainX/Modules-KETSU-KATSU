@@ -562,9 +562,18 @@ for (data of nodeList) {
     for (var c = 0; c < nombreEpisodio.length; c++) {
         
         if (nombreEpisodio[c] == '-') {
-            nombreEpisodio = nombreEpisodio.replace('-', ' ')
+            nombreEpisodio = nombreEpisodio.replace('-', ' ');
         }
     }
+
+    let nomEpiArr = nombreEpisodio.split('');
+
+    for (var c = 0; c < 6; c++) {
+        nomEpiArr.shift();
+    }
+    
+    nombreEpisodio = nomEpiArr.join('');
+    console.log(nombreEpisodio);
 
     let obj = new Chapter(nombreEpisodio, new ModuleRequest(link, 'get', emptyKeyValue, null), false);
 
