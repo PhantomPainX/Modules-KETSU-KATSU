@@ -1,0 +1,86 @@
+
+<script type="text/javascript">    
+
+    function Chapters(request, extra, javascriptConfig, output) {
+        this.request = request;
+        this.extra = extra;
+        this.javascriptConfig = javascriptConfig;
+        this.output = output;
+    }
+    function ModuleRequest(url, method, headers, httpBody) {
+        this.url = url;
+        this.method = method;
+        this.headers = headers;
+        this.httpBody = httpBody;
+    }
+    function Extra(commands, extraInfo) {
+        this.commands = commands;
+        this.extraInfo = extraInfo;
+    }
+    function Commands(commandName, params) {
+        this.commandName = commandName;
+        this.params = params;
+    }
+    function JavascriptConfig(removeJavascript, loadInWebView, javaScript) {
+        this.removeJavascript = removeJavascript;
+        this.loadInWebView = loadInWebView;
+        this.javaScript = javaScript;
+    }
+    function KeyValue(key, value) {
+        this.key = key;
+        this.value = value;
+    }
+    function Output(videos, images, text) {
+        this.videos = videos;
+        this.images = images;
+        this.text = text;
+    }
+    function Videos(needsResolver, rawVideo) {
+        this.needsResolver = needsResolver;
+        this.rawVideo = rawVideo;
+    }
+    function NeedsResolver(resolverIdentifier, link) {
+        this.resolverIdentifier = resolverIdentifier;
+        this.link = link;
+    }
+    function RawVideo(video) {
+        this.video = video;
+    }
+    function Video(videoQuality, videoLink) {
+        this.videoQuality = videoQuality;
+        this.videoLink = videoLink;
+    }
+    function Text(text) {
+        this.text = text;
+    }
+    var output = [];
+    var savedData = document.getElementById("ketsu-final-data");
+    var parsedJson = JSON.parse(savedData.innerHTML);
+    var emptyKeyValue = [new KeyValue("", "")];
+    if (document.querySelector("#hentai > p:nth-child(14)")) {
+        var body = document.querySelector("#hentai > p:nth-child(14)");
+        var scri = document.createElement("script");
+        var links = [];
+        scri.innerHTML = body.innerHTML.replaceAll("\\\\", "");
+        document.querySelector("body").appendChild(scri);
+    }
+    for (var i = 0; i < videos.length; i++) {
+        var id = "";
+        if (videos[i][1].includes("fembed")) {
+            id = "FEMBED";
+            output.push(new NeedsResolver(id, new ModuleRequest(videos[i][1], "get", emptyKeyValue, null)));
+        } else if (videos[i][1].includes("mp4upload")) {
+            id = "MP4UPLOAD";
+            output.push(new NeedsResolver(id, new ModuleRequest(videos[i][1], "get", emptyKeyValue, null)));
+        } else if (videos[i][1].includes("yourupload")) {
+            id = "YOURUPLOAD";
+            output.push(new NeedsResolver(id, new ModuleRequest(videos[i][1], "get", emptyKeyValue, null)));
+        } else output.push(new NeedsResolver(id, new ModuleRequest(videos[i][1], "get", emptyKeyValue, null)));
+    }
+    let emptyExtra = new Extra([new Commands("", emptyKeyValue)], emptyKeyValue);
+    var chaptersObject = new Chapters(new ModuleRequest("", "", emptyKeyValue, null), emptyExtra, new JavascriptConfig(false, false, ""), new Output(new Videos(output, null), null, null));
+    var finalJson = JSON.stringify(chaptersObject);
+    savedData.innerHTML = finalJson;
+
+
+</script>
