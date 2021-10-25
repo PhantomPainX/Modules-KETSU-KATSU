@@ -1,34 +1,58 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modulos KETSU</title>
 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,600;0,900;1,100;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./ignore/custom.css">
 </head>
+
+
 <body style="background-color: aliceblue;">
 
-    <nav class="navbar navbar-light shadow-sm">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/cc/ed/96/cced96a3-2940-5f7a-e9f5-abda63fa5e73/source/200x200bb.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top">
-            Modulos KETSU por KnifeX
-          </a>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/cc/ed/96/cced96a3-2940-5f7a-e9f5-abda63fa5e73/source/200x200bb.jpg" alt="" width="30" height="30" class="d-inline-block align-text-top">
+        Modules Ketsu
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#video-container">Video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#form-row">Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-row">About KETSU</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
 
     <br>
     <br>
 
     <main class="container align-items-center justify-content-center alto-100">
       
-      <div class="row">
+      <div class="row" id="video-container">
+
+        <h1>Video</h1>
 
         <div class="col-12 p-2">
           <article class="card h-100 bg-success text-white shadow-sm text-center">
@@ -41,10 +65,8 @@
                   </div>
               </div>
 
-              <p class="h6">Un modulo para ver peliculas, series, doramas y animes en español en FULL HD 1080p.</p>
-
-              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/PelisPlus/moduleTemplate.json" class="btn btn-info mt-3">Agregar Modulo</a>
-              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/PelisPlus/moduleTemplate.json" class="btn btn-info mt-3">Codigo</a>
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/PelisPlus/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/PelisPlus/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
             </div>
           </article>
         </div>
@@ -60,10 +82,8 @@
                   </div>
               </div>
 
-              <p class="h6">Mira anime HD 720p desde https://www3.animeflv.net/ !!</p>
-
-              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFLV/moduleTemplate.json" class="btn btn-info mt-3">Agregar Modulo</a>
-              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFLV/moduleTemplate.json" class="btn btn-info mt-3">Codigo</a>
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFLV/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFLV/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
             </div>
           </article>
         </div>
@@ -79,10 +99,8 @@
                   </div>
               </div>
 
-              <p class="h6">Mira capitulos completos de los Simpsons Latino desde https://simpsonizados.online/</p>
-
-              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/LosSimpsons/moduleTemplate.json" class="btn btn-info mt-3">Agregar Modulo</a>
-              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/LosSimpsons/moduleTemplate.json" class="btn btn-info mt-3">Codigo</a>
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/LosSimpsons/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/LosSimpsons/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
             </div>
           </article>
         </div>
@@ -98,10 +116,8 @@
                   </div>
               </div>
 
-              <p class="h6">Mira anime HD 720p desde https://www.animefenix.com/ !!</p>
-
-              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFenix/moduleTemplate.json" class="btn btn-info mt-3">Agregar Modulo</a>
-              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFenix/moduleTemplate.json" class="btn btn-info mt-3">Codigo</a>
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFenix/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/AnimeFenix/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
             </div>
           </article>
         </div>
@@ -114,32 +130,178 @@
                   <div class="mt-1">
                       <h6 class="m-0 h6">HentaiLA</h6>
                       <p class="m-0 h6">Language: ESP</p>
+                      <p class="m-0 h6">Developers: Letters & KnifeX</p>
                   </div>
               </div>
 
-              <p class="h6">Mira hentai en HD desde https://hentaila.com/ >_></p>
-
-              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/HentaiLA/moduleTemplate.json" class="btn btn-info mt-3">Agregar Modulo</a>
-              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/HentaiLA/moduleTemplate.json" class="btn btn-info mt-3">Codigo</a>
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/HentaiLA/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/PhantomPainX/Modules-KETSU-KATSU/main/KETSU/HentaiLA/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
             </div>
           </article>
         </div>
 
+        <div class="col-12 p-2">
+          <article class="card h-100 bg-success text-white shadow-sm text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                  <img src="https://media.cdnandroid.com/9a/6b/e0/2f/imagen-jkanime-0thumb.jpeg" alt="" height="50px" width="50px" class="border border-info border-3 rounded-circle">
+                  <div class="mt-1">
+                      <h6 class="m-0 h6">JKAnime</h6>
+                      <p class="m-0 h6">Language: ESP</p>
+                  </div>
+              </div>
+
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/JKAnime/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/JKAnime/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 p-2">
+          <article class="card h-100 bg-success text-white shadow-sm text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                  <img src="https://i1.wp.com/kodibeginner.com/wp-content/uploads/2020/10/gogoanime.jpg?fit=300%2C300&ssl=1" alt="" height="50px" width="50px" class="border border-info border-3 rounded-circle">
+                  <div class="mt-1">
+                      <h6 class="m-0 h6">GoGoAnime</h6>
+                      <p class="m-0 h6">Language: ENG</p>
+                  </div>
+              </div>
+
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/GoGoAnime/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/GoGoAnime/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 p-2">
+          <article class="card h-100 bg-success text-white shadow-sm text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                  <img src="https://i.imgur.com/cS7YC5Y.png" alt="" height="50px" width="50px" class="border border-info border-3 rounded-circle">
+                  <div class="mt-1">
+                      <h6 class="m-0 h6">AnimeKisa</h6>
+                      <p class="m-0 h6">Language: ENG</p>
+                  </div>
+              </div>
+
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/Anime%20Kisa/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/Anime%20Kisa/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 p-2">
+          <article class="card h-100 bg-success text-white shadow-sm text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                  <img src="https://i.imgur.com/TXMzuRc.png" alt="" height="50px" width="50px" class="border border-info border-3 rounded-circle">
+                  <div class="mt-1">
+                      <h6 class="m-0 h6">4Anime</h6>
+                      <p class="m-0 h6">Language: ENG</p>
+                  </div>
+              </div>
+
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/4Anime/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/4Anime/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 p-2">
+          <article class="card h-100 bg-success text-white shadow-sm text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                  <img src="https://www.wcostream.com///wp-content/themes/animewp78712/images/logo.gif" alt="" height="50px" width="50px" class="border border-info border-3 rounded-circle">
+                  <div class="mt-1">
+                      <h6 class="m-0 h6">WCOS</h6>
+                      <p class="m-0 h6">Language: ENG</p>
+                  </div>
+              </div>
+
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/WCOS/module.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/WCOS/module.json" class="btn btn-info mt-3">Get Code</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 p-2">
+          <article class="card h-100 bg-success text-white shadow-sm text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                  <img src="https://i.imgur.com/c4yUxIH.jpg" alt="" height="50px" width="50px" class="border border-info border-3 rounded-circle">
+                  <div class="mt-1">
+                      <h6 class="m-0 h6">AnimePahe</h6>
+                      <p class="m-0 h6">Language: ENG</p>
+                  </div>
+              </div>
+
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/AnimePahe/module.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/AnimePahe/module.json" class="btn btn-info mt-3">Get Code</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 p-2">
+          <article class="card h-100 bg-success text-white shadow-sm text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                  <img src="https://s2.bunnycdn.ru/assets/9anime/favicons/favicon.png?v1" alt="" height="50px" width="50px" class="border border-info border-3 rounded-circle">
+                  <div class="mt-1">
+                      <h6 class="m-0 h6">9Anime</h6>
+                      <p class="m-0 h6">Language: ENG</p>
+                  </div>
+              </div>
+
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/9Anime/module.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/9Anime/module.json" class="btn btn-info mt-3">Get Code</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 p-2">
+          <article class="card h-100 bg-success text-white shadow-sm text-center">
+            <div class="card-body">
+              <div class="mb-3">
+                  <img src="https://i.imgur.com/AYyMYiE.png" alt="" height="50px" width="50px" class="border border-info border-3 rounded-circle">
+                  <div class="mt-1">
+                      <h6 class="m-0 h6">VostFree</h6>
+                      <p class="m-0 h6">Language: FR</p>
+                  </div>
+              </div>
+
+              <a href="ketsuapp://?moduleData=https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/VostFree/moduleTemplate.json" class="btn btn-info mt-3">Add Module</a>
+              <a href="https://raw.githubusercontent.com/mprotmod/Modules-KETSU/main/Module%20Parser%20KETSU/VostFree/moduleTemplate.json" class="btn btn-info mt-3">Get Code</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
         <div class="container mt-5">
 
-          <div class="row">
-            <div class="col-md-12 text-center">
 
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexxjtGGJqU7WUKvP4CaSbH56xmK2wwlhEnDvx3BxZqFfEtcA/viewform?embedded=true" width="450" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+          <div class="row" id="form-row">
+            <div class="col-md-12 text-center">
+              <h1>Form</h1>
+
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLSexxjtGGJqU7WUKvP4CaSbH56xmK2wwlhEnDvx3BxZqFfEtcA/viewform?embedded=true" width="450" height="800">Cargando…</iframe>
+              </div>
+
             </div>
           </div>
 
-          <div class="row mt-5">
+          <div class="row mt-5" id="about-row">
               <div class="col-md-12 text-center">
-                  <h1>Acerca de Ketsu</h1>
+                  <h1>About KETSU</h1>
                   <p>
-                      KETSU es la primera aplicación modular que permite a sus usuarios crear y cargar
-                      modulos para consumir cualquier tipo de contenido en internet, ya sean videos, imagenes e 
+                    <strong>ENG: </strong> KETSU is a modular app that allows the user to create and load modules for it, 
+                      allowing the user to consume any kind of media imported by the user.
+                  </p>
+                  <p>
+                      <strong>ESP: </strong>KETSU es la primera aplicación modular que permite a sus usuarios crear y cargar
+                      módulos para consumir cualquier tipo de contenido en internet, ya sean videos, imagenes e 
                       incluso recetas de cocina :)
                   </p>
                   <p>Puedes encontrar la pagina oficial usando el siguiente link: <a href="https://ketsu.app/">https://ketsu.app/</a></p>
@@ -157,10 +319,14 @@
           </div>
         </div>
 
+        
+
       <br>
       <br>
       
     </main>
 
 </body>
+
+
 </html>
