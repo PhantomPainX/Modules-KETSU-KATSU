@@ -68,6 +68,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#about-row">About KETSU</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#comments">Comments</a>
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PhantomPainX/Modules-KETSU-KATSU">GitHub Repository</a>
@@ -82,17 +85,18 @@
       <div class="row">
         <div class="col-12">
           <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading">Welcome!</h4>
+            <h4 class="alert-heading">Welcome KETSU Lovers</h4>
             <p>This page will recopilate all modules for the KETSU application, you can add them 
               to your app easily using the Add Module button.
             </p>
-            <p>You can also request modules via the forms below.</p>
+            <p>You can also request modules via the comments section below</p>
             <hr>
-            <p class="mb-0">You can star the github repository if you like my modules.</p>
+            <p class="mb-0">Star the github repository if you like my modules.</p>
           </div>
 
           <div class="alert alert-info" role="alert">
-            Modules may not work inmediatly when the new version of KETSU is released. The ones made by KnifeX will be adapted as soon as possible.
+            <h4 class="alert-heading">Important!</h4>
+            Write the modules you want in the comments section below. that way before the forms please.
           </div>
           <!--
           <div class="alert alert-success" role="alert">
@@ -571,7 +575,20 @@
 
                   </div>
 
-                  <div class="row" id="form-row">
+                  <div class="row mt-4" id="comments">
+                    <hr>
+                    <h1 style="text-align: start; margin-bottom: 30px;">Comments Section</h1>
+                    <div class="col-md-12">
+
+                      <div id="disqus_thread"></div>
+        
+                    </div>
+                  </div>
+
+                  <!-- <div class="row mt-4" id="form-row">
+                    <hr>
+                    <h1 style="text-align: start; margin-bottom: 30px;">Video Embed</h1>
+                    <div class="col-md-12">
                     <div class="col-md-12 text-center">
 
                       <div class="embed-responsive embed-responsive-16by9">
@@ -579,7 +596,8 @@
                       </div>
         
                     </div>
-                  </div>
+                  </div> -->
+
               </div>
           </div>
         </div>
@@ -631,6 +649,25 @@
       </div>
     </div>
 
+    <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ketsumodules.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <script id="dsq-count-scr" src="//ketsumodules.disqus.com/count.js" async></script>
 </body>
 
 </html>
