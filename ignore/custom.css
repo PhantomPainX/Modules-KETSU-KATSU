@@ -102,6 +102,17 @@ body {
   height: 600px;
 }
 
+.responsive-video {
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 575px) {
+  .responsive-video {
+    height: 250px;
+  }
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
