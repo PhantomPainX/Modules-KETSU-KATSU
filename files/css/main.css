@@ -60,8 +60,12 @@ header nav {
 
 header nav a {
     color: #333333;
+    transition: color 0.3s ease;
 }
 
+header nav a:hover {
+    color: #c21111;
+}
 
 header nav ul {
     display: flex;
