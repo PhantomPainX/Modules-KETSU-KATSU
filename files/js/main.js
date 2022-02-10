@@ -34,6 +34,18 @@ document.getElementById('load-more-videos').addEventListener('click', function()
   }
 });
 
+document.getElementById('load-more-mangas').addEventListener('click', function() {
+  var container = document.getElementById('manga-modules');
+  var button = document.getElementById('load-more-mangas');
+  if (container.style.maxHeight) {
+    container.style.maxHeight = null;
+    button.innerHTML = "Load More...";
+  } else {
+    container.style.maxHeight = container.scrollHeight + "px";
+    button.innerHTML = "Load Less...";
+  }
+});
+
 (function() {
   var d = document, s = d.createElement('script');
   s.src = 'https://ketsumodules.disqus.com/embed.js';

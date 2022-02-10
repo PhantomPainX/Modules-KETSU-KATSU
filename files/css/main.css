@@ -210,7 +210,7 @@ main {
 }
 
 .text-card .title h2 {
-    font-size: 1.25rem;
+    font-size: 1.40rem;
     font-weight: bold;
     color: #15102e;
 }
@@ -219,6 +219,12 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.text-card .content h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #15102e;
 }
 
 .text-card .content p {
@@ -231,6 +237,20 @@ main {
     background-color: #f0d4d4;
     color: #f3b2b2;
     border: #f39c9c solid 1px;
+}
+
+.green-card {
+    background-color: #ddf0d4;
+    border: #b1e29a solid 1px;
+}
+
+.green-card a {
+    color: #45a11a;
+    transition: color 0.3s ease;
+}
+
+.green-card a:hover {
+    color: #44d600;
 }
 
 .grey-card {
@@ -265,6 +285,12 @@ main {
 
 .contain {
     max-height: 525px;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.contain2 {
+    max-height: 480px;
     overflow: hidden;
     transition: all 0.3s ease-out;
 }
