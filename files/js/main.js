@@ -33,3 +33,10 @@ document.getElementById('load-more-videos').addEventListener('click', function()
     button.innerHTML = "Load Less...";
   }
 });
+
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://ketsumodules.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
